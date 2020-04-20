@@ -16,7 +16,7 @@ h1{
     align-items: center;
     text-align: center;
 }
- .input{
+ #userInput{
     outline: none;
     background-color: #fff;
     border: none;
@@ -25,7 +25,7 @@ h1{
     font-size: 1.1rem;
     border-radius: 25px;
 }
-.round{
+#enter{
     height: 50px;
     width: 50px;
     border-radius: 25px;
@@ -34,7 +34,7 @@ h1{
     background-color: #440844;
     cursor: pointer;
 }
-.round:hover{
+#enter:hover{
     opacity: 0.5;
 }
 .container{
@@ -45,26 +45,59 @@ h1{
     text-align: center;
     margin-top: 2rem;
 }
-.content{
-    border-bottom: 4px solid #440844;
-}
-.write{
+
+ul{
+    text-align: left;
     background: none;
     outline: none;
     border: none;
     color: #fff;
     width: 350px;
-    font-size: 1.2rem;
+    margin-top: -25px;
+    font-size: 1.6rem;
 }
-.edit{
-    font-size: 1rem;
-    border: none;
+li{
+    list-style: none;
     background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-bottom: 4px solid #440844;
+    width: 460px;
+    margin-left: -62px;
+    font-size: 1.4rem;
+    transition: all 0.75s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+li > button{
+    font-weight:normal;
+    background:none;
+    border: none;
+    float: right;
+    color:#8b0808;
+}
+.done{
+    background: #440844 !important;
     color: #fff;
 }
-.remove{
-    font-size: 1rem;
-    border: none;
-    background: none;
-    color: #e41c1c;
+.delete {
+    display: none;
+}
+
+
+/*Responsive Queries*/
+@media screen and (max-width: 450px){
+    #userInput{
+        height: 50px;
+        width: 200px;
+        font-size: 1.0rem;
+        border-radius: 30px;
+    }
+    li{
+        width:265px ;
+        margin-left: 30px;
+    }
 }

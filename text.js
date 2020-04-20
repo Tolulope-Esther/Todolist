@@ -1,38 +1,54 @@
-const round = document.querySelector(".round");
-var inputValue = document.querySelector(".input");
-const container = document.querySelector(".container");
+var enterButton = document.getElementById("enter");
+var input = document.getElementById("userInput");
+var ul = document.querySelector("ul");
+var item = document.getElementsByTagName("li");
 
-class content{
-    constructor(contentName){
-        this.createDiv(contentName);
-    }
+function inputLength(){
+    return input.value.length;
+};
 
-    createDiv(contentName){
-        let input = document.createElement("input");
-        input.value = contentName;
-        input.disabled = true;
-        input.classList.add("write");
-        input.type = "text";
+function listLength(){
+    return item.length;
+};
 
-        let contentBox = document.createElement("div");
-        contentBox.classList.add("content");
+function createListElement(){
+    var li = document.createElement("li");
 
-        let edit = document.createElement("button");
-        edit.innerHTML = EDIT;
-        edit.classList.add("edit");
+li.appendChild(document.createTextNode(input.value));
+ul.appendChild(li);
+input.value = "";
 
-        let remove = document.createElement("button");
-        remove.innerHTML = Remove;
-        remove.classList.add("remove");
 
-        container.appendChild(contentBox);
+function crossOut() {
+    li.classList.toggle("done");
+};
 
-        contentBox.appendChild(input);
-        contentBox.appendChild(edit);
-        contentBox.appendChild(remove);
+li.addEventListener("click", crossOut);
 
+//Remove Button
+
+var dBtn = document.createElement("button");
+dBtn.appendChild(document.createTextNode("Remove"));
+li.appendChild(dBtn);
+dBtn.addEventListener("click", deleteListItem);
+
+function deleteListItem(){
+    li.classList.add("delete")
+}
+}
+
+function addListAfterClick(){
+    if (inputLength() > 0) {
+        createListElement();
     }
 }
 
-new content("Sport");
-    
+function addListAfterKeypress(event) {
+    if (inputLength() > 0 && event.which ===13){
+        createListElement();
+    }
+}
+
+enter.addEventListener("click", addListAfterClick);
+
+input.addEventListener("keypress", addListAfterKeypress);
