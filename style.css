@@ -9,14 +9,14 @@ h1{
     text-align: center;
 }
 .todo{
-    color: #440844;
+    color: #8f1b8f;
 }
-.input_div{
+.input{
     justify-content: center;
     align-items: center;
     text-align: center;
 }
- #userInput{
+ #write{
     outline: none;
     background-color: #fff;
     border: none;
@@ -25,16 +25,16 @@ h1{
     font-size: 1.1rem;
     border-radius: 25px;
 }
-#enter{
+#submit{
     height: 50px;
     width: 50px;
     border-radius: 25px;
     outline: none;
     border: none;
-    background-color: #440844;
+    background-color: #8f1b8f;
     cursor: pointer;
 }
-#enter:hover{
+#submit:hover{
     opacity: 0.5;
 }
 .container{
@@ -62,7 +62,7 @@ li{
     outline: none;
     border: none;
     color: #fff;
-    border-bottom: 4px solid #440844;
+    border-bottom: 4px solid #8f1b8f;
     width: 460px;
     margin-left: -62px;
     font-size: 1.4rem;
@@ -72,12 +72,24 @@ li{
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
 }
-li > button{
+li >removeBtn{
     font-weight:normal;
     background:none;
     border: none;
     float: right;
+    font-size: 1.1rem;
     color:#8b0808;
+    cursor: pointer;
+}
+li >editBtn{
+    font-weight:normal;
+    background:none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-right: 6%;
+    float: right;
+    font-size: 1rem;
 }
 .done{
     background: #440844 !important;
@@ -90,7 +102,7 @@ li > button{
 
 /*Responsive Queries*/
 @media screen and (max-width: 450px){
-    #userInput{
+    #write{
         height: 50px;
         width: 200px;
         font-size: 1.0rem;

@@ -1,54 +1,71 @@
-var enterButton = document.getElementById("enter");
-var input = document.getElementById("userInput");
-var ul = document.querySelector("ul");
+var submitbtn = document.getElementById("submit");
+var write = document.getElementById("write");
+var ul = document.getElementsByTagName("ul")[0];
 var item = document.getElementsByTagName("li");
 
-function inputLength(){
-    return input.value.length;
-};
+function writeLength(){
+    return write.value.length;
+}
 
-function listLength(){
-    return item.length;
-};
+function itemLength(){
+    return item.value.length
+}
 
 function createListElement(){
     var li = document.createElement("li");
 
-li.appendChild(document.createTextNode(input.value));
-ul.appendChild(li);
-input.value = "";
+li.appendChild(document.createTextNode(write.value));
+ul.appendChild(li); //means to append the li to the ul tag
+write.value = "";
 
 
-function crossOut() {
+
+function annul () {
     li.classList.toggle("done");
 };
+li.addEventListener("click", annul);
 
-li.addEventListener("click", crossOut);
 
-//Remove Button
 
-var dBtn = document.createElement("button");
+// Remove Effect
+
+var dBtn = document.createElement("removeBtn");
 dBtn.appendChild(document.createTextNode("Remove"));
 li.appendChild(dBtn);
-dBtn.addEventListener("click", deleteListItem);
+dBtn.addEventListener("click", deletelistitem);
 
-function deleteListItem(){
-    li.classList.add("delete")
+function deletelistitem(){
+    li.classList.add("delete");
 }
+
+//Edit Effect
+
+
+var eBtn = document.createElement("editBtn");
+eBtn.appendChild(document.createTextNode("EDIT"));
+li.appendChild(eBtn);
+eBtn.addEventListener("click", editlistitem);
+
+function editlistitem(){
+    document.getElementById("write").innerHTML = "write";
 }
+
 
 function addListAfterClick(){
-    if (inputLength() > 0) {
+    if (writeLength() > 0) {
         createListElement();
     }
 }
 
 function addListAfterKeypress(event) {
-    if (inputLength() > 0 && event.which ===13){
+    if (writeLength() > 0 && event.which === 13) {
         createListElement();
     }
 }
 
-enter.addEventListener("click", addListAfterClick);
+submitbtn.addEventListener("click", addListAfterClick);
 
-input.addEventListener("keypress", addListAfterKeypress);
+write.addEventListener("keypress", "addListAfterKeypress");
+
+
+};
