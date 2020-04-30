@@ -81,7 +81,7 @@ li >removeBtn{
     color:#8b0808;
     cursor: pointer;
 }
-li >editBtn{
+/* li >editBtn{
     font-weight:normal;
     background:none;
     border: none;
@@ -90,7 +90,7 @@ li >editBtn{
     padding-right: 6%;
     float: right;
     font-size: 1rem;
-}
+} */
 .done{
     background: #440844 !important;
     color: #fff;
