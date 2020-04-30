@@ -3,6 +3,7 @@ var write = document.getElementById("write");
 var ul = document.getElementsByTagName("ul")[0];
 var item = document.getElementsByTagName("li");
 
+
 function writeLength(){
     return write.value.length;
 }
@@ -13,17 +14,16 @@ function itemLength(){
 
 function createListElement(){
     var li = document.createElement("li");
-
 li.appendChild(document.createTextNode(write.value));
 ul.appendChild(li); //means to append the li to the ul tag
 write.value = "";
 
 
-
-function annul () {
+ function annul () {
     li.classList.toggle("done");
-};
-li.addEventListener("click", annul);
+ }
+ 
+ li.addEventListener("click", annul);
 
 
 
@@ -41,16 +41,15 @@ function deletelistitem(){
 //Edit Effect
 
 
-var eBtn = document.createElement("editBtn");
+/*var eBtn = document.createElement("editBtn");
 eBtn.appendChild(document.createTextNode("EDIT"));
 li.appendChild(eBtn);
 eBtn.addEventListener("click", editlistitem);
 
 function editlistitem(){
-    document.getElementById("write").innerHTML = "write";
+    document.getElementById("extend");
+} */
 }
-
-
 function addListAfterClick(){
     if (writeLength() > 0) {
         createListElement();
@@ -65,7 +64,4 @@ function addListAfterKeypress(event) {
 
 submitbtn.addEventListener("click", addListAfterClick);
 
-write.addEventListener("keypress", "addListAfterKeypress");
-
-
-};
+write.addEventListener("keypress", addListAfterKeypress);
