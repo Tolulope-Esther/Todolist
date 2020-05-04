@@ -21,7 +21,7 @@ h1{
     background-color: #fff;
     border: none;
     height: 50px;
-    width: 470px;
+    width: 600px;
     font-size: 1.1rem;
     border-radius: 25px;
 }
@@ -52,7 +52,7 @@ ul{
     outline: none;
     border: none;
     color: #fff;
-    width: 440px;
+    width: 560px;
     margin-top: -25px;
     font-size: 1.6rem;
 }
@@ -63,7 +63,7 @@ li{
     border: none;
     color: #fff;
     border-bottom: 4px solid #c2bc15;
-    width: 520px;
+    width: 650px;
     margin-left: -62px;
     font-size: 1.4rem;
     transition: all 0.75s ease;
