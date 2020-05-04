@@ -9,7 +9,7 @@ h1{
     text-align: center;
 }
 .todo{
-    color: #8f1b8f;
+    color: #c2bc15;
 }
 .input{
     justify-content: center;
@@ -31,7 +31,7 @@ h1{
     border-radius: 25px;
     outline: none;
     border: none;
-    background-color: #8f1b8f;
+    background-color: #c2bc15;
     cursor: pointer;
 }
 #submit:hover{
@@ -39,7 +39,7 @@ h1{
 }
 .container{
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -62,7 +62,7 @@ li{
     outline: none;
     border: none;
     color: #fff;
-    border-bottom: 4px solid #8f1b8f;
+    border-bottom: 4px solid #c2bc15;
     width: 460px;
     margin-left: -62px;
     font-size: 1.4rem;
@@ -78,7 +78,7 @@ li >removeBtn{
     border: none;
     float: right;
     font-size: 1.1rem;
-    color:#8b0808;
+    color:#9b0606;
     cursor: pointer;
 }
 /* li >editBtn{
@@ -92,7 +92,7 @@ li >removeBtn{
     font-size: 1rem;
 } */
 .done{
-    background: #440844 !important;
+    background: #c2bc15 !important;
     color: #fff;
 }
 .delete {
@@ -101,7 +101,7 @@ li >removeBtn{
 
 
 /*Responsive Queries*/
-@media screen and (max-width: 450px){
+/* @media screen and (max-width: 450px){
     #write{
         height: 50px;
         width: 280px;
@@ -112,4 +112,4 @@ li >removeBtn{
         width:350px ;
         margin-left: 0px;
     }
-}
+} */
